@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="confirm-container">
+  <div class="confirm-card">
+
+    <h1>Admin Login 🔐</h1>
+    <p class="subtitle">Authorized access only</p>
+
+    <form onsubmit="return adminLogin()">
+      <div class="input-group">
+        <label>Username</label>
+        <input type="text" id="username" required>
+      </div>
+
+      <div class="input-group">
+        <label>Password</label>
+        <input type="password" id="password" required>
+      </div>
+
+      <button class="btn primary full">Login</button>
+    </form>
+
+  </div>
+</div>
+
+<script src="js/admin-auth.js"></script>
+</body>
+</html>

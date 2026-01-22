@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="confirm-container">
+  <div class="confirm-card">
+
+    <h1>Payment 💳</h1>
+    <p class="subtitle">Review & complete your payment</p>
+
+    <div class="payment-summary">
+      <p><strong>Name:</strong> <span id="pName"></span></p>
+      <p><strong>Destination:</strong> <span id="pPlace"></span></p>
+      <p><strong>Package:</strong> <span id="pPackage"></span></p>
+      <p><strong>Days:</strong> <span id="pDays"></span></p>
+      <p class="amount"><strong>Total:</strong> ₹<span id="pAmount"></span></p>
+    </div>
+
+    <button onclick="makePayment()" class="btn primary full">
+      Pay Now
+    </button>
+
+  </div>
+</div>
+
+<script src="js/payment.js"></script>
+</body>
+</html>

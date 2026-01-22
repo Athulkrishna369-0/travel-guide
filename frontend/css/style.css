@@ -1,0 +1,445 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  text-align: center;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: #0093E9;
+  color: white;
+}
+
+.btn.secondary {
+  background: #f2f2f2;
+  color: #333;
+}
+
+.btn:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+.full {
+  width: 100%;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  background: linear-gradient(to right, #0093E9, #80D0C7);
+  padding: 60px 20px;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* =========================
+   SLIDER
+========================= */
+.slider {
+  position: relative;
+  width: 90%;
+  height: 350px;
+  margin: 30px auto;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-text {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+/* =========================
+   DESTINATIONS
+========================= */
+.page-title {
+  margin: 30px 0;
+  font-size: 32px;
+}
+
+.destinations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 40px;
+}
+
+.destination-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  transition: 0.3s;
+}
+
+.destination-card:hover {
+  transform: translateY(-10px);
+}
+
+.destination-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+/* =========================
+   PLACE PAGE
+========================= */
+.place-hero {
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.place-overlay {
+  color: white;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.place-overlay h1 {
+  font-size: 48px;
+}
+
+.place-card {
+  max-width: 700px;
+  margin: -80px auto 40px;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.place-card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   GALLERY
+========================= */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   PRICING
+========================= */
+.section-title {
+  margin-top: 50px;
+  font-size: 28px;
+}
+
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 30px;
+}
+
+.price-card {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.price-card:hover {
+  transform: translateY(-10px);
+}
+
+/* =========================
+   FORMS
+========================= */
+.confirm-container,
+.success-container {
+  min-height: 100vh;
+  background: linear-gradient(to right, #0093E9, #80D0C7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirm-card,
+.success-card {
+  background: white;
+  padding: 35px;
+  width: 380px;
+  border-radius: 25px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+  animation: fadeUp 1s ease;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 13px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+input[readonly] {
+  background: #f2f2f2;
+}
+
+/* =========================
+   ADMIN TABLE
+========================= */
+table {
+  width: 80%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background: #0093E9;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+.delete-btn {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #e60000;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.hero .btn {
+  margin: 15px 10px;
+}
+/* =========================
+   HOME PAGE EXTRAS
+========================= */
+.home-section {
+  padding: 60px 40px;
+  background: #f5f7fa;
+}
+
+.home-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.home-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.home-card:hover {
+  transform: translateY(-10px);
+}
+
+.home-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.home-card h3 {
+  margin: 15px 0 5px;
+}
+
+.home-card p {
+  padding-bottom: 15px;
+  color: #666;
+}
+
+/* WHY US */
+.why-us {
+  padding: 60px 40px;
+  background: white;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.why-box {
+  background: #f2f2f2;
+  padding: 30px;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+/* CTA */
+.cta {
+  padding: 60px 20px;
+  background: linear-gradient(to right, #0093E9, #80D0C7);
+  color: white;
+}
+.small-hero {
+  padding: 40px 20px;
+}
+/* =========================
+   HERO BACKGROUND SLIDER
+========================= */
+.hero-slider {
+  height: 70vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* overlay ONLY */
+.hero-overlay {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.45)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.hero-overlay .btn {
+  margin-top: 25px;
+}
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  background: white;
+}
+.payment-summary {
+  text-align: left;
+  margin: 20px 0;
+  font-size: 15px;
+}
+
+.payment-summary p {
+  margin: 8px 0;
+}
+
+.payment-summary .amount {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #0093E9;
+}

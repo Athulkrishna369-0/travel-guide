@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Confirm Booking</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="confirm-container">
+  <div class="confirm-card">
+
+    <h1>Confirm Your Trip ✈️</h1>
+    <p class="subtitle">Please review your booking details</p>
+
+    <form onsubmit="return confirmBooking()">
+      <div class="input-group">
+        <label>Name</label>
+        <input type="text" id="name" placeholder="Your Name" required>
+      </div>
+
+      <div class="input-group">
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Email" required>
+      </div>
+      <div class="input-group">
+      <label>Destination</label>
+      <select id="place" required>
+      <option value="">Select Destination</option>
+      <option value="kerala">Kerala</option>
+      <option value="goa">Goa</option>
+      <option value="manali">Manali</option>
+     <option value="rajasthan">Rajasthan</option>
+    </select>
+    </div>
+
+   <div class="input-group">
+    <label>Package</label>
+  <select id="package" required>
+    <option value="">Select Package</option>
+    <option value="Budget">Budget</option>
+    <option value="Standard">Standard</option>
+    <option value="Premium">Premium</option>
+    <option value="Customize">Customize</option>
+  </select>
+</div>
+
+
+      <div class="input-group">
+        <label>Number of Days</label>
+        <input type="number" id="days" placeholder="e.g. 5" required>
+      </div>
+
+      <button type="submit" class="btn primary full">
+        Confirm Booking
+      </button>
+    </form>
+
+  </div>
+</div>
+
+<!-- THIS SCRIPT LINE IS CRITICAL -->
+<script src="js/booking.js"></script>
+
+</body>
+</html>

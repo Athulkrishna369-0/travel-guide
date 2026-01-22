@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script>
+  if (localStorage.getItem("adminLoggedIn") !== "true") {
+    window.location.href = "admin-login.html";
+  }
+</script>
+
+<h1>Admin Dashboard 📋</h1>
+<div class="admin-controls">
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Search by name or email"
+    onkeyup="loadBookings()"
+  />
+
+  <select id="placeFilter" onchange="loadBookings()">
+    <option value="">All Places</option>
+    <option value="kerala">Kerala</option>
+    <option value="goa">Goa</option>
+    <option value="manali">Manali</option>
+    <option value="rajasthan">Rajasthan</option>
+  </select>
+<button onclick="logoutAdmin()" class="btn secondary">
+  Logout
+</button>
+  <button onclick="exportCSV()" class="btn primary">
+    Export CSV
+  </button>
+</div>
+
+
+<table border="1" align="center" cellpadding="10">
+ <tr>
+  <th>Name</th>
+  <th>Email</th>
+  <th>Place</th>
+  <th>Package</th>
+  <th>Days</th>
+  <th>Amount</th>
+  <th>Payment</th>
+  <th>Action</th>
+</tr>
+
+  <tbody id="bookingData"></tbody>
+</table>
+
+<script src="js/admin.js"></script>
+</body>
+</html>

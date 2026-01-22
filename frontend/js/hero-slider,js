@@ -1,0 +1,20 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const hero = document.getElementById("hero");
+
+  const images = [
+    "images/kerala.jpg",
+    "images/goa.jpg",
+    "images/manali.jpg",
+    "images/rajasthan.jpg"
+  ];
+
+  let index = 0;
+
+  // Set initial image
+  hero.style.backgroundImage = `url(${images[index]})`;
+
+  setInterval(() => {
+    index = (index + 1) % images.length;
+    hero.style.backgroundImage = `url(${images[index]})`;
+  }, 4000);
+});
